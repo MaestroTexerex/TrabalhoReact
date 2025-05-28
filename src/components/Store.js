@@ -240,7 +240,7 @@ const Store = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await api.get("/app/produtos/010623008");
+      const response = await api.get("/app/produtos/010623050");
       setProducts(response.data);
       setLoading(false);
     } catch (error) {
@@ -311,7 +311,7 @@ const Store = () => {
     try {
       const orderData = {
         nomeCliente: orderDetails.buyerName,
-        usuario: "010623008",
+        usuario: "010623050",
         data: new Date().toISOString().split("T")[0],
         produtos: cart.map((item) => ({
           nome: item.nome,
